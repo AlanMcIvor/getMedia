@@ -12,12 +12,13 @@
 
 html{
     font-family: Montserrat, "sans-serif";
+    overflow-x: hidden;
 }
 
 /* navbar */
 
 .navbar{
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100dvw;
     display: flex;
@@ -25,10 +26,12 @@ html{
     align-items: center;
     color: aliceblue;
     padding: 0 5em;
+    background-color: #060805;
+    z-index: 10;
 }
 
 .logo, .link-container{
-    margin: 1em;
+    margin: 0.5em;
 }
 
 .logo{
@@ -63,14 +66,6 @@ html{
     width: 150px;
 }
 
-/* hide hamburger when full screen */
-#menu-btn{
-    display: none;
-}
-
-.overlay{
-    background-color: black;
-}
 
 @media screen and (max-width: 850px) {
     .navbar{
@@ -169,4 +164,79 @@ html{
     
 }
 
+/* search bar */
+
+#search-section{
+    text-align: center;
+}
+
+.form-container{
+    margin: 3em auto;
+    text-align: center;
+}
+
+input{
+    padding: 0.7em;
+    width: 45%;
+    position: relative;
+    background-color: #EBEBEB;
+    border: none;
+}
+
+button{
+    position: absolute;
+    padding: 0.7em;
+    border: none;
+    background: var(--accent-color);
+    cursor: pointer;
+}
+
+button:active{
+   background-color: #c25428;
+}
+
+@media screen and (max-width: 850px) {
+    input{
+  
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    button{
+        position: unset;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    button{
+        width: 85%;
+        margin-top: 0.4em;
+    }
+ 
+    
+}
+
+
+/* top-albums-section */
+
+#top-albums{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+.top-album-container{
+    width: 350px;
+    height: auto;
+    overflow: hidden;
+
+}
+
+.top-album-container img{
+    max-width: 100%;
+    height: auto;
+}
 
