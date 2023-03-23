@@ -38,6 +38,7 @@ html{
 .link-container{
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .nav-link:first-of-type{
@@ -50,6 +51,12 @@ html{
     font-size: 1.2em;
     cursor: pointer;
     color: inherit;
+}
+
+#login{
+    border: 1px solid var(--accent-color);
+    padding: 0.2em 1em;
+    border-radius: 5px;
 }
 
 .signup-btn{
@@ -127,6 +134,14 @@ html{
     font-weight: 700;
     text-align: center;
     margin: 0 auto;
+    -webkit-box-shadow: 10px 10px 7px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 7px -7px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 7px -7px rgba(0,0,0,0.75);
+    transition: 300ms ease-in-out;
+}
+
+.btn:hover{
+    transform: translateY(2px);
 }
 
 .trial-btn{
